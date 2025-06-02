@@ -9,7 +9,7 @@ on:
       url:
         description: 'URL to run Lighthouse on'
         required: false
-        default: 'http://localhost:8080'
+        default: 'https://front-5th-chapter4-2-basic-eta.vercel.app/'
 
 permissions:
   issues: write

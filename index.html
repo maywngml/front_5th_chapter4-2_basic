@@ -64,47 +64,40 @@
     <section class="hero">
       <picture>
         <source
-          srcset="images/Hero_Desktop.avif"
+          srcset="images/Hero_Mobile.avif"
+          media="(max-width: 576px)"
           type="image/avif"
         />
         <source
-          srcset="images/Hero_Desktop.webp"
-          type="image/webp"
+          srcset="images/Hero_Tablet.avif"
+          media="(max-width: 960px)"
+          type="image/avif"
         />
-        <img
-          class="desktop"
-          src="images/Hero_Desktop.jpg"
-        />
-      </picture>
-      <picture>
         <source
-          srcset="images/Hero_Mobile.avif"
+          srcset="images/Hero_Desktop.avif"
+          media="(min-width: 961px)"
           type="image/avif"
         />
         <source
           srcset="images/Hero_Mobile.webp"
+          media="(max-width: 576px)"
           type="image/webp"
-        />
-        <img
-          class="mobile"
-          src="images/Hero_Mobile.jpg"
-        />
-      </picture>
-      <picture>
-        <source
-          srcset="images/Hero_Tablet.avif"
-          type="image/avif"
         />
         <source
           srcset="images/Hero_Tablet.webp"
+          media="(max-width: 960px)"
+          type="image/webp"
+        />
+        <source
+          srcset="images/Hero_Desktop.webp"
+          media="(min-width: 961px)"
           type="image/webp"
         />
         <img
-          class="tablet"
-          src="images/Hero_Tablet.jpg"
+          srcset="images/Hero_Mobile.jpg 576w, images/Hero_Tablet.jpg 960w"
+          src="images/Hero_Desktop.jpg"
         />
       </picture>
-
       <div class="hero-content">
         <div class="container">
           <h1>Discover our line of VR Headsets</h1>

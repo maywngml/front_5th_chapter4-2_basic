@@ -94,21 +94,8 @@ section.hero {
 
 section.hero img {
   width: 100%;
-  filter: brightness(50%);
-  display: none;
-}
-
-section.hero img.desktop {
-  display: initial;
   aspect-ratio: 144/67;
-}
-
-section.hero img.mobile {
-  aspect-ratio: 1/1;
-}
-
-section.hero img.tablet {
-  aspect-ratio: 96/77;
+  filter: brightness(50%);
 }
 
 .hero-content {
@@ -479,12 +466,8 @@ footer .copyright-text {
     display: inline-block;
   }
 
-  section.hero img.desktop {
-    display: none;
-  }
-
-  section.hero img.tablet {
-    display: initial;
+  section.hero img {
+    aspect-ratio: 96/77;
   }
 
   .hero-content h1 {
@@ -619,12 +602,8 @@ footer .copyright-text {
     height: 7px;
   }
 
-  section.hero img.tablet {
-    display: none;
-  }
-
-  section.hero img.mobile {
-    display: initial;
+  section.hero img {
+    aspect-ratio: 1/1;
   }
 
   .hero-content {

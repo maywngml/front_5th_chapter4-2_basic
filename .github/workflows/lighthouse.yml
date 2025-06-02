@@ -5,11 +5,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-    inputs:
-      url:
-        description: 'URL to run Lighthouse on'
-        required: false
-        default: 'https://front-5th-chapter4-2-basic-eta.vercel.app/'
 
 permissions:
   issues: write
@@ -32,15 +27,11 @@ jobs:
           npm install -g @lhci/cli@0.14.x
           npm install -g http-server
 
-      - name: Start local server
-        run: http-server . -p 8080 &
-
       - name: Run Lighthouse CI
         id: lighthouse
         continue-on-error: true
         run: |
-          URL="${{ github.event.inputs.url || 'http://localhost:8080' }}"
-          lhci autorun --collect.url=$URL
+          lhci autorun --collect.url='https://front-5th-chapter4-2-basic-eta.vercel.app/'
 
       - name: Create GitHub Issue with Results
         if: always()
